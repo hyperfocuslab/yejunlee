@@ -453,6 +453,98 @@
       font-weight: 800;
     }
 
+    .hero-grid {
+      gap: 42px;
+      grid-template-columns: minmax(0, 1.04fr) minmax(320px, 0.96fr);
+    }
+
+    .hero-visual {
+      padding: 24px;
+      border-radius: 42px;
+    }
+
+    .hero-visual::before {
+      inset: 12px;
+      border-radius: 32px;
+      background:
+        radial-gradient(circle at 24% 24%, rgba(122, 92, 255, 0.12), transparent 38%),
+        radial-gradient(circle at 78% 18%, rgba(60, 207, 202, 0.1), transparent 32%),
+        linear-gradient(180deg, rgba(122, 92, 255, 0.05), rgba(60, 207, 202, 0.03));
+    }
+
+    .focus-card {
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 34px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.64), rgba(247, 244, 255, 0.82));
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.78),
+        0 28px 52px rgba(53, 37, 104, 0.14);
+    }
+
+    .focus-card::before,
+    .focus-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(6px);
+    }
+
+    .focus-card::before {
+      width: 220px;
+      height: 220px;
+      top: -56px;
+      right: -24px;
+      background: radial-gradient(circle, rgba(122, 92, 255, 0.22), transparent 70%);
+    }
+
+    .focus-card::after {
+      width: 240px;
+      height: 240px;
+      bottom: -80px;
+      left: -40px;
+      background: radial-gradient(circle, rgba(60, 207, 202, 0.16), transparent 72%);
+    }
+
+    .device-frame {
+      border-radius: 46px;
+      background: linear-gradient(180deg, #19152b, #2e2950);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 12px;
+      box-shadow:
+        0 40px 80px rgba(38, 27, 78, 0.34),
+        0 8px 18px rgba(21, 15, 43, 0.22);
+    }
+
+    .device-frame::before {
+      top: 12px;
+      width: 39%;
+      height: 28px;
+      border-radius: 0 0 18px 18px;
+      background: rgba(18, 14, 35, 0.98);
+    }
+
+    .device-main {
+      position: relative;
+      top: auto;
+      right: auto;
+      width: min(100%, 340px);
+    }
+
+    .app-shot {
+      border-radius: 34px;
+    }
+
+    .visual-note,
+    .visual-badge,
+    .device-secondary {
+      display: none;
+    }
+
     .section {
       padding: 26px 0;
     }
@@ -661,23 +753,13 @@
         font-size: 2.45rem;
       }
 
-      .device-secondary {
-        left: 12px;
-        bottom: 12px;
-        width: 112px;
+      .visual-stack,
+      .focus-card {
+        min-height: 500px;
       }
 
-      .visual-note {
-        position: relative;
-        top: auto;
-        left: auto;
-        width: auto;
-        margin-bottom: 18px;
-      }
-
-      .visual-badge {
-        right: 18px;
-        bottom: 22px;
+      .device-main {
+        width: min(100%, 308px);
       }
 
       .hero-visual,
