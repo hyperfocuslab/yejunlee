@@ -267,10 +267,32 @@
     }
 
     /* CTA Buttons */
-    .hero-actions {
-      display: flex; flex-wrap: wrap; gap: 14px;
+    .store-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 26px;
+      align-items: center;
       justify-content: center;
-      margin-top: 36px;
+    }
+    .store-badge {
+      display: block;
+      transition: transform var(--transition);
+    }
+    .store-badge:hover {
+      transform: scale(1.05);
+    }
+    .store-badge img {
+      height: 46px;
+      width: auto;
+      display: block;
+    }
+    .store-badge.play-store img {
+      height: 64px; /* Google badge usually has built-in padding */
+      margin: -9px 0;
+    }
+    .cta-box .store-badges {
+      justify-content: center;
     }
     .btn {
       display: inline-flex; align-items: center; justify-content: center; gap: 10px;
@@ -906,14 +928,12 @@
             ADHD 약 복용 시간만 기록하면 예상 약효 곡선을 그려드려요.<br>
             집중력이 가장 높은 시간을 찾아 내 하루를 기획하세요.
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://apps.apple.com/app/id6757836001" target="_blank" rel="noreferrer" id="hero-cta-ios">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-              App Store
+          <div class="store-badges">
+            <a href="https://apps.apple.com/app/id6757836001" target="_blank" rel="noreferrer" class="store-badge" id="hero-cta-ios">
+              <img src="assets/app-store-badge.svg" alt="Download on the App Store">
             </a>
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.peakly.android" target="_blank" rel="noreferrer" id="hero-cta-android">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302c.495.283.8.812.8 1.39s-.305 1.107-.8 1.39l-2.302 1.302-2.535-2.535 2.535-2.849zM5.864 2.658L16.8 9.009l-2.302 2.302L5.864 2.658z"/></svg>
-              Google Play
+            <a href="https://play.google.com/store/apps/details?id=com.peakly.android" target="_blank" rel="noreferrer" class="store-badge play-store" id="hero-cta-android">
+              <img src="assets/google-play-badge.png" alt="Get it on Google Play">
             </a>
           </div>
         </div>
@@ -1111,14 +1131,12 @@
         <div class="cta-box reveal">
           <h2>오늘부터<br><span class="gradient-text">기록해보세요.</span></h2>
           <p>복약과 하루 컨디션을 함께 기록하는 습관,<br>피클리로 시작하세요.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="https://apps.apple.com/app/id6757836001" target="_blank" rel="noreferrer" id="cta-ios">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-              App Store에서 보기
+          <div class="store-badges">
+            <a href="https://apps.apple.com/app/id6757836001" target="_blank" rel="noreferrer" class="store-badge" id="cta-ios">
+              <img src="assets/app-store-badge.svg" alt="Download on the App Store">
             </a>
-            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.peakly.android" target="_blank" rel="noreferrer" id="cta-android">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302c.495.283.8.812.8 1.39s-.305 1.107-.8 1.39l-2.302 1.302-2.535-2.535 2.535-2.849zM5.864 2.658L16.8 9.009l-2.302 2.302L5.864 2.658z"/></svg>
-              Google Play에서 보기
+            <a href="https://play.google.com/store/apps/details?id=com.peakly.android" target="_blank" rel="noreferrer" class="store-badge play-store" id="cta-android">
+              <img src="assets/google-play-badge.png" alt="Get it on Google Play">
             </a>
           </div>
         </div>
