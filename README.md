@@ -7,6 +7,10 @@ GitHub Pages에 바로 올릴 수 있도록 정리한 정적 사이트 파일입
 - `index.html`: 새 랜딩 페이지
 - `privacy.html`: 현재 라이브 개인정보처리방침 사본
 - `terms.html`: 현재 라이브 서비스 이용약관 사본
+- `support.html`: 한국어 고객지원 페이지
+- `support-en.html`: 영어 고객지원 페이지
+- `support-ja.html`: 일본어 고객지원 페이지
+- `assets/support.css`: 고객지원 페이지 공통 스타일
 - `app-ads.txt`: AdMob 검증 파일
 - `CNAME`: 커스텀 도메인 설정
 - `.nojekyll`: GitHub Pages 정적 파일 처리 보장
